@@ -18,6 +18,7 @@ import {OrderDetailsComponent} from './order-details/order-details.component';
 import {AdminIndexComponent} from './admin-index/admin-index.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { CategoryShowComponent } from './category-show/category-show.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CategoryShowComponent } from './category-show/category-show.component';
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

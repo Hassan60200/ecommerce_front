@@ -16,12 +16,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="products" routerLinkActive="active">Produits</a>
       </li>
-      <div class="justify-content-end d-flex">
+      <div class="justify-content-end d-flex" *ngIf="isUserLoggedIn">
         <li class="nav-item">
           <a class="nav-link" routerLink="login" routerLinkActive="active">Connexion</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="registration" routerLinkActive="active">Inscription</a>
+        </li>
+        <li class="nav-item" *ngIf="isUserLoggedIn">
+          <a class="nav-link" (click)="onLogout()">Déconnexion</a>
         </li>
       </div>
     </ul>
