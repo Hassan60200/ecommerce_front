@@ -1,0 +1,7 @@
+<div class="row d-flex justify-content-center p-5">
+  <div *ngFor="let product of products" class="card col-md-3 m-3">
+    <span>{{product.title}}</span>
+    <span class="nav-pills">{{product.price}} €</span>
+    <a routerLink="/{{product.id}}">voir plus</a>
+  </div>
+</div>
