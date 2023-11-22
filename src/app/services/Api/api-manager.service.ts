@@ -27,4 +27,13 @@ export class ApiManagerService {
       .catch(error => console.error('Error:', error));
   }
 
+  getProductById(id: number){
+    return fetch(`${this.urlBack}api/products/${id}`)
+      .then(response => response.json())
+      .then(data => {
+        return data;
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
 }
