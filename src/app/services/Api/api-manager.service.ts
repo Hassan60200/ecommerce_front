@@ -13,7 +13,8 @@ export class ApiManagerService {
     return fetch(`${this.urlBack}api/categories`)
       .then(response => response.json())
       .then(data => {
-        return data.results;
+        console.log(data)
+        return data;
       })
       .catch(error => console.error('Error:', error));
   }

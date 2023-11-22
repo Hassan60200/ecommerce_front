@@ -17,6 +17,7 @@ import {CategoryListComponent} from './category-list/category-list.component';
 import {OrderDetailsComponent} from './order-details/order-details.component';
 import {AdminIndexComponent} from './admin-index/admin-index.component';
 import {AppRoutingModule} from "./app-routing.module";
+import { CategoryShowComponent } from './category-show/category-show.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {AppRoutingModule} from "./app-routing.module";
     UserEditComponent,
     CategoryListComponent,
     OrderDetailsComponent,
-    AdminIndexComponent
+    AdminIndexComponent,
+    CategoryShowComponent
   ],
   imports: [
     BrowserModule,
