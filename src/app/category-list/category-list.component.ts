@@ -15,7 +15,6 @@ export class CategoryListComponent implements OnInit {
   ngOnInit() {
     this.api.getAllCategory().then(data => {
       this.categories = data;
-      console.log(this.categories)
     }).catch(error => console.error(error));
   }
 }
