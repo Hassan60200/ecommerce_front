@@ -53,7 +53,7 @@ export class ApiManagerService {
     })
       .then(response => response.json())
       .then(token => {
-        localStorage.setItem('token', token)
+        localStorage.setItem('token', token.token)
         return token;
       })
       .catch(error => console.error('Error:', error));

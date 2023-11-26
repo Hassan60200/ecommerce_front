@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiManagerService} from "../services/Api/api-manager.service";
 import {AuthService} from "../services/Auth/auth-manager.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -10,13 +11,15 @@ import {AuthService} from "../services/Auth/auth-manager.service";
 export class LoginComponent implements OnInit {
   user: any = {}
   loginError: string = '';
-  constructor(private api: ApiManagerService, private authService: AuthService) {
+
+  constructor(private api: ApiManagerService, private router: Router) {
   }
 
   ngOnInit() {
   }
+
   onLogin() {
-    const { username, password } = this.user;
+    const {username, password} = this.user;
     console.log(username, password)
 
     if (!username || !password) {
@@ -26,7 +29,7 @@ export class LoginComponent implements OnInit {
 
     this.api.authenticate(username, password)
       .then(response => {
-        console.log('Connexion réussie:', response);
+        this.router.navigateByUrl('products')
       })
       .catch(error => {
         console.error('Erreur de connexion:', error);
