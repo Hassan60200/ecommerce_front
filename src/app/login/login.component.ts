@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiManagerService} from "../services/Api/api-manager.service";
-import {AuthService} from "../services/Auth/auth-manager.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -20,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
     const {username, password} = this.user;
-    console.log(username, password)
 
     if (!username || !password) {
       this.loginError = 'Veuillez fournir un email et un mot de passe.';

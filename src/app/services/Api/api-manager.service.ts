@@ -59,4 +59,23 @@ export class ApiManagerService {
       .catch(error => console.error('Error:', error));
   }
 
+  registration(email: string, password: string, lastName: string, firstName: string) {
+    const registerData = {
+      email: email,
+      password: password,
+      lastName: lastName,
+      firstName: firstName
+    };
+
+    return fetch(`${this.urlBack}registration`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(registerData),
+    })
+      .then(response => response.json())
+      .catch(error => console.error('Error:', error));
+  }
+
 }
